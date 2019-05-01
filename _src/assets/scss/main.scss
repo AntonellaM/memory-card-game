@@ -1,0 +1,42 @@
+@import 'core/settings';
+
+body {
+	height: 100vh;
+}
+
+.cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 15vw;
+}
+
+.card {
+	width: 160px;
+	height: 195px;
+	background-color: #eee;
+	border: 1px solid lightgrey;
+	position: relative;
+	border-radius: 5px;
+	margin: 5px;
+
+	&__image {
+		width: 160px;
+		height: 195px;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__image--default {
+		@extend .card__image;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.hide {
+	display: none;
+}
